@@ -72,7 +72,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      }
     }
 
     chef.run_list = [

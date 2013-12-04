@@ -29,3 +29,7 @@ include_recipe "ruby_build"
 ruby_build_ruby node['ruby']['version'] do
     prefix_path node['ruby']['prefix_path']
 end
+
+gem_package "bundler" do
+    action :upgrade
+end
