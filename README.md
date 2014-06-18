@@ -1,18 +1,19 @@
 # Ruby Cookbook
 
 This cookbook will install the most recent ruby version system-wide
-by compiling from the source using (ruby-build)[https://github.com/sstephenson/ruby-build].
+by compiling from the source using (ruby-install)[https://github.com/postmodern/ruby-install].
 
 While ruby-build is a rbenv plugin, it can be used standalone without
 effort.
 
 # Requirements
 
-We use the awesome (chef-ruby_build)[https://github.com/fnichol/chef-ruby_build] recipe to invoke ruby-build
+We use the (chef-ruby_install)[https://github.com/rosstimson/chef-ruby_install.git] recipe to install ruby-install
+and invoke it by our own LWRP.
 
 # Usage
 
-Upload chef-ruby_build and this cookbook to your chef server and
+Upload chef-ruby_install and this cookbook to your chef server and
 customize the attributes if you need.
 
 # Attributes

@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-        "recipe[ruby_build]",
+        "recipe[ruby_install]",
         "recipe[ruby::default]"
     ]
   end
