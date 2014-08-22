@@ -24,6 +24,10 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+Array(node['ruby']['required_pkgs']).each do |pkg|
+  package pkg
+end
+
 include_recipe "ruby_install"
 
 ruby_install "#{node['ruby']['version']}" do
