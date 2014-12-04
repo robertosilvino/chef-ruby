@@ -1,7 +1,11 @@
 # This version must be compatible with ruby-install definitions
-default['ruby']['version']      = '2.1.2'
+default['ruby']['version']      = '2.1.5'
 default['ruby']['prefix_path']  = '/usr/local'
 default['ruby']['flavor']       = 'ruby'
+
+# Override ruby install attributes to get latest version
+set['ruby_install']['version'] = '0.5.0'
+set['ruby_install']['version'] = 'aa4448c2c356510cc7c2505961961a17bd3f3435842831e04c8516eb703afd19'
 
 case node['platform_family']
 when 'debian', 'ubuntu'
