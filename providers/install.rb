@@ -16,9 +16,10 @@ action :reinstall do
 end
 
 def load_current_resource
-  @ruby_version = new_resource.definition
-  @prefix_path = new_resource.prefix_path || node['ruby']['prefix_path']
-  @ruby_flavor = new_resource.flavor || node['ruby']['flavor']
+  @definition   = new_resource.definition
+  @ruby_version = new_resource.version      || node['ruby']['version']
+  @prefix_path  = new_resource.prefix_path  || node['ruby']['prefix_path']
+  @ruby_flavor  = new_resource.flavor       || node['ruby']['flavor']
 end
 
 private
