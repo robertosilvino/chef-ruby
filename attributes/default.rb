@@ -4,8 +4,8 @@ default['ruby']['prefix_path']  = '/usr/local'
 default['ruby']['flavor']       = 'ruby'
 
 # Override ruby install attributes to get latest version
-set['ruby_install']['version'] = '0.5.0'
-set['ruby_install']['checksum'] = 'aa4448c2c356510cc7c2505961961a17bd3f3435842831e04c8516eb703afd19'
+node.set['ruby_install']['version'] = '0.5.0'
+node.set['ruby_install']['checksum'] = 'aa4448c2c356510cc7c2505961961a17bd3f3435842831e04c8516eb703afd19'
 
 case node['platform_family']
 when 'debian', 'ubuntu'

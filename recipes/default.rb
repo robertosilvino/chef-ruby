@@ -28,17 +28,17 @@ Array(node['ruby']['required_pkgs']).each do |pkg|
   package pkg
 end
 
-include_recipe "ruby_install"
+include_recipe 'ruby_install'
 
 ruby_install "#{node['ruby']['version']}" do
-  notifies :reload, "ohai[reload]", :immediately
+  notifies :reload, 'ohai[reload]', :immediately
 end
 
 # reload ruby data
-ohai "reload" do
+ohai 'reload' do
   action :reload
 end
 
-gem_package "bundler" do
+gem_package 'bundler' do
   action :upgrade
 end
